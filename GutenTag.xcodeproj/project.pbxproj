@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9913C29B17E06C530081A8E4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9913C29A17E06C530081A8E4 /* Cocoa.framework */; };
+		9913C2A517E06C530081A8E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9913C2A317E06C530081A8E4 /* InfoPlist.strings */; };
+		9913C2A717E06C530081A8E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9913C2A617E06C530081A8E4 /* main.m */; };
+		9913C2AB17E06C530081A8E4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9913C2A917E06C530081A8E4 /* Credits.rtf */; };
+		9913C2AE17E06C530081A8E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9913C2AD17E06C530081A8E4 /* AppDelegate.m */; };
+		9913C2B117E06C530081A8E4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9913C2AF17E06C530081A8E4 /* MainMenu.xib */; };
+		9913C2BB17E06C8F0081A8E4 /* GutenTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 9913C2BA17E06C8F0081A8E4 /* GutenTag.m */; };
+		99E285DA17E49AC1000FAAC1 /* libusb-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E285D817E49AC1000FAAC1 /* libusb-1.0.0.dylib */; };
+		99E285DB17E49AC1000FAAC1 /* HexFiend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E285D917E49AC1000FAAC1 /* HexFiend.framework */; };
+		99E285DD17E49B1D000FAAC1 /* HexFiend.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99E285DC17E49B1D000FAAC1 /* HexFiend.framework */; };
+		99E285DF17E49B61000FAAC1 /* libusb-1.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99E285DE17E49B61000FAAC1 /* libusb-1.0.0.dylib */; };
+		99FB23EA17E27EC900942B86 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FB23E917E27EC900942B86 /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9977A05517E352340095269A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				99E285DF17E49B61000FAAC1 /* libusb-1.0.0.dylib in CopyFiles */,
+				99E285DD17E49B1D000FAAC1 /* HexFiend.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9913C29717E06C530081A8E4 /* GutenTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GutenTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9913C29A17E06C530081A8E4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9913C29D17E06C530081A8E4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9913C29E17E06C530081A8E4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9913C29F17E06C530081A8E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9913C2A217E06C530081A8E4 /* GutenTag-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GutenTag-Info.plist"; sourceTree = "<group>"; };
+		9913C2A417E06C530081A8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9913C2A617E06C530081A8E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9913C2A817E06C530081A8E4 /* GutenTag-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GutenTag-Prefix.pch"; sourceTree = "<group>"; };
+		9913C2AA17E06C530081A8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		9913C2AC17E06C530081A8E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9913C2AD17E06C530081A8E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9913C2B017E06C530081A8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9913C2B917E06C8F0081A8E4 /* GutenTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GutenTag.h; sourceTree = "<group>"; };
+		9913C2BA17E06C8F0081A8E4 /* GutenTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GutenTag.m; sourceTree = "<group>"; };
+		9977A05117E34F110095269A /* libusb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libusb.h; sourceTree = "<group>"; };
+		99E285D817E49AC1000FAAC1 /* libusb-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libusb-1.0.0.dylib"; path = "GutenTag/Frameworks/libusb-1.0.0.dylib"; sourceTree = "<group>"; };
+		99E285D917E49AC1000FAAC1 /* HexFiend.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HexFiend.framework; path = GutenTag/Frameworks/HexFiend.framework; sourceTree = "<group>"; };
+		99E285DC17E49B1D000FAAC1 /* HexFiend.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HexFiend.framework; path = GutenTag/Frameworks/HexFiend.framework; sourceTree = "<group>"; };
+		99E285DE17E49B61000FAAC1 /* libusb-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libusb-1.0.0.dylib"; path = "GutenTag/Frameworks/libusb-1.0.0.dylib"; sourceTree = "<group>"; };
+		99FB23E917E27EC900942B86 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9913C29417E06C530081A8E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99E285DA17E49AC1000FAAC1 /* libusb-1.0.0.dylib in Frameworks */,
+				99E285DB17E49AC1000FAAC1 /* HexFiend.framework in Frameworks */,
+				99FB23EA17E27EC900942B86 /* IOKit.framework in Frameworks */,
+				9913C29B17E06C530081A8E4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9913C28E17E06C530081A8E4 = {
+			isa = PBXGroup;
+			children = (
+				9913C2A017E06C530081A8E4 /* GutenTag */,
+				9913C29917E06C530081A8E4 /* Frameworks */,
+				9913C29817E06C530081A8E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9913C29817E06C530081A8E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9913C29717E06C530081A8E4 /* GutenTag.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9913C29917E06C530081A8E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99E285DE17E49B61000FAAC1 /* libusb-1.0.0.dylib */,
+				99E285D817E49AC1000FAAC1 /* libusb-1.0.0.dylib */,
+				99E285DC17E49B1D000FAAC1 /* HexFiend.framework */,
+				99E285D917E49AC1000FAAC1 /* HexFiend.framework */,
+				99FB23E917E27EC900942B86 /* IOKit.framework */,
+				9913C29A17E06C530081A8E4 /* Cocoa.framework */,
+				9913C29C17E06C530081A8E4 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9913C29C17E06C530081A8E4 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9913C29D17E06C530081A8E4 /* AppKit.framework */,
+				9913C29E17E06C530081A8E4 /* CoreData.framework */,
+				9913C29F17E06C530081A8E4 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9913C2A017E06C530081A8E4 /* GutenTag */ = {
+			isa = PBXGroup;
+			children = (
+				9913C2AC17E06C530081A8E4 /* AppDelegate.h */,
+				9913C2AD17E06C530081A8E4 /* AppDelegate.m */,
+				9913C2B717E06C5A0081A8E4 /* Model */,
+				99E9A4C917E1A9A100C76295 /* View */,
+				9913C2B817E06C690081A8E4 /* Nibs */,
+				9913C2A117E06C530081A8E4 /* Supporting Files */,
+			);
+			path = GutenTag;
+			sourceTree = "<group>";
+		};
+		9913C2A117E06C530081A8E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9913C2A217E06C530081A8E4 /* GutenTag-Info.plist */,
+				9913C2A317E06C530081A8E4 /* InfoPlist.strings */,
+				9913C2A617E06C530081A8E4 /* main.m */,
+				9913C2A817E06C530081A8E4 /* GutenTag-Prefix.pch */,
+				9913C2A917E06C530081A8E4 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9913C2B717E06C5A0081A8E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9977A05117E34F110095269A /* libusb.h */,
+				9913C2B917E06C8F0081A8E4 /* GutenTag.h */,
+				9913C2BA17E06C8F0081A8E4 /* GutenTag.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9913C2B817E06C690081A8E4 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				9913C2AF17E06C530081A8E4 /* MainMenu.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		99E9A4C917E1A9A100C76295 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9913C29617E06C530081A8E4 /* GutenTag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9913C2B417E06C530081A8E4 /* Build configuration list for PBXNativeTarget "GutenTag" */;
+			buildPhases = (
+				9913C29317E06C530081A8E4 /* Sources */,
+				9913C29417E06C530081A8E4 /* Frameworks */,
+				9913C29517E06C530081A8E4 /* Resources */,
+				9977A05517E352340095269A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GutenTag;
+			productName = GutenTag;
+			productReference = 9913C29717E06C530081A8E4 /* GutenTag.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9913C28F17E06C530081A8E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Gianluca Puglia";
+			};
+			buildConfigurationList = 9913C29217E06C530081A8E4 /* Build configuration list for PBXProject "GutenTag" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9913C28E17E06C530081A8E4;
+			productRefGroup = 9913C29817E06C530081A8E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9913C29617E06C530081A8E4 /* GutenTag */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9913C29517E06C530081A8E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9913C2A517E06C530081A8E4 /* InfoPlist.strings in Resources */,
+				9913C2AB17E06C530081A8E4 /* Credits.rtf in Resources */,
+				9913C2B117E06C530081A8E4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9913C29317E06C530081A8E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9913C2A717E06C530081A8E4 /* main.m in Sources */,
+				9913C2AE17E06C530081A8E4 /* AppDelegate.m in Sources */,
+				9913C2BB17E06C8F0081A8E4 /* GutenTag.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9913C2A317E06C530081A8E4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9913C2A417E06C530081A8E4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9913C2A917E06C530081A8E4 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9913C2AA17E06C530081A8E4 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		9913C2AF17E06C530081A8E4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9913C2B017E06C530081A8E4 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9913C2B217E06C530081A8E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9913C2B317E06C530081A8E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9913C2B517E06C530081A8E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)/GutenTag/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GutenTag/GutenTag-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"";
+				INFOPLIST_FILE = "GutenTag/GutenTag-Info.plist";
+				LD_DYLIB_INSTALL_NAME = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/GutenTag/Frameworks\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9913C2B617E06C530081A8E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)/GutenTag/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GutenTag/GutenTag-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"";
+				INFOPLIST_FILE = "GutenTag/GutenTag-Info.plist";
+				LD_DYLIB_INSTALL_NAME = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/GutenTag/Frameworks\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9913C29217E06C530081A8E4 /* Build configuration list for PBXProject "GutenTag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9913C2B217E06C530081A8E4 /* Debug */,
+				9913C2B317E06C530081A8E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9913C2B417E06C530081A8E4 /* Build configuration list for PBXNativeTarget "GutenTag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9913C2B517E06C530081A8E4 /* Debug */,
+				9913C2B617E06C530081A8E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9913C28F17E06C530081A8E4 /* Project object */;
+}
