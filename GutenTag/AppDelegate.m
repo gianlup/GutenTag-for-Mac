@@ -159,14 +159,16 @@ void usbDeviceRemoved(void *refCon, io_iterator_t iterator) {
     __block NSArray *url;
     [op beginSheetModalForWindow:self.window completionHandler:^(NSInteger result) {
         url = [op URLs];
-        NSString *path = [[url objectAtIndex:0] path];
-        tagMemory = [NSData dataWithContentsOfFile:path];
-        if ([tagMemory length] == 512) {
-            [_hexView setData:tagMemory];
-            _statusBar.stringValue = @"Dump Loaded.";
-        }
-        else {
-            _statusBar.stringValue = @"Dump is not valid.";
+        if ([url count]) {
+            NSString *path = [[url objectAtIndex:0] path];
+            tagMemory = [NSData dataWithContentsOfFile:path];
+            if ([tagMemory length] == 512) {
+                [_hexView setData:tagMemory];
+                _statusBar.stringValue = @"Dump Loaded.";
+            }
+            else {
+                _statusBar.stringValue = @"Dump is not valid.";
+            }
         }
     }];
 }
@@ -176,10 +178,12 @@ void usbDeviceRemoved(void *refCon, io_iterator_t iterator) {
     if ([toWrite length] == 512) {
         NSSavePanel *op = [NSSavePanel savePanel];
         [op beginSheetModalForWindow:self.window completionHandler:^(NSInteger result) {
-            NSURL *url = [[op URL] URLByAppendingPathExtension:@"bin"];
-            HFProgressTracker *pT = [[HFProgressTracker alloc] init];
-            [toWrite writeToFile:url trackingProgress:pT error:nil];
-            _statusBar.stringValue = @"Dump Saved.";
+            if ([op URL] != nil) {
+                NSURL *url = [[op URL] URLByAppendingPathExtension:@"bin"];
+                HFProgressTracker *pT = [[HFProgressTracker alloc] init];
+                [toWrite writeToFile:url trackingProgress:pT error:nil];
+                _statusBar.stringValue = @"Dump Saved.";
+            }
         }];
     }
     else {
