@@ -125,29 +125,18 @@ void usbDeviceRemoved(void *refCon, io_iterator_t iterator) {
     [layoutView setFrame:[_hexView bounds]];
     [layoutView setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
     [_hexView setLayoutRepresenter:layoutRep];
+    [[_hexView controller] setEditable:NO];
     
     [NSThread detachNewThreadSelector:@selector(initGutenTag) toTarget:[GutenTag sharedInstance] withObject:nil];
+}
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    return YES;
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
     [[GutenTag sharedInstance] freeGutenTag];
     return NSTerminateNow;
-}
-
-- (void)disableButtons {
-    [_loadButton setEnabled:NO];
-    [_saveButton setEnabled:NO];
-    [_writeButton setEnabled:NO];
-    [_readButton setEnabled:NO];
-    [_verifyButton setEnabled:NO];
-}
-
-- (void)enableButtons {
-    [_loadButton setEnabled:YES];
-    [_saveButton setEnabled:YES];
-    [_writeButton setEnabled:YES];
-    [_readButton setEnabled:YES];
-    [_verifyButton setEnabled:YES];
 }
 
 #pragma mark Actions
@@ -317,6 +306,25 @@ void usbDeviceRemoved(void *refCon, io_iterator_t iterator) {
 }
 
 #pragma mark Various
+
+- (void)disableButtons {
+    [_loadButton setEnabled:NO];
+    [_saveButton setEnabled:NO];
+    [_writeButton setEnabled:NO];
+    [_readButton setEnabled:NO];
+    [_verifyButton setEnabled:NO];
+    [[_hexView controller] setEditable:NO];
+}
+
+- (void)enableButtons {
+    [_loadButton setEnabled:YES];
+    [_saveButton setEnabled:YES];
+    [_writeButton setEnabled:YES];
+    [_readButton setEnabled:YES];
+    [_verifyButton setEnabled:YES];
+    
+    [[_hexView controller] setEditable:YES];
+}
 
 - (void)scheduleTimerForScan {
     if (![scanForTagTimer isValid]) {
